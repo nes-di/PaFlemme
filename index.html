@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaFlemme - To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-box">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44" height="44">
+                <defs>
+                    <linearGradient id="pafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#E13B3F" />
+                        <stop offset="100%" stop-color="#EA580C" />
+                    </linearGradient>
+                </defs>
+                <rect width="44" height="44" rx="12" fill="url(#pafGrad)" />
+                <path d="M12 22 L19 29 L32 15" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <h1>Pa<span>Flemme</span></h1>
+            <span class="badge-header">DASHBOARD</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="colonne-gauche">
+            <div class="carte-verre bloc-age">
+                <p class="titre-bloc">Âge sélectionné :</p>
+                <ul class="liste-ages">
+                    <li>6-10 ans</li>
+                    <li>11-15 ans</li>
+                    <li class="actif">16-25 ans (Actif)</li>
+                    <li>26-60 ans</li>
+                    <li>60 ans et plus</li>
+                </ul>
+            </div>
+            <div class="carte-verre bloc-desc">
+                <p class="titre-bloc">Organisation</p>
+                <p class="texte-gris">Structure tes journées sans pression. Le système calcule automatiquement la charge et le temps nécessaire.</p>
+            </div>
+        </section>
+
+        <section class="colonne-centre">
+            <p class="titre-bloc">Mes tâches en cours</p>
+            <div class="liste-taches">
+                <div class="tache-item">
+                    <strong>Ranger la chambre</strong>
+                    <div class="tache-infos">
+                        <span class="tag tag-moyen">Moyen</span>
+                        <span class="duree">⏱ 30 min</span>
+                    </div>
+                </div>
+
+                <div class="tache-item">
+                    <strong>Faire la vaisselle</strong>
+                    <div class="tache-infos">
+                        <span class="tag tag-facile">Facile</span>
+                        <span class="duree">⏱ 10 min</span>
+                    </div>
+                </div>
+
+                <div class="tache-item">
+                    <strong>Préparer le dîner</strong>
+                    <div class="tache-infos">
+                        <span class="tag tag-difficile">Difficile</span>
+                        <span class="duree">⏱ 45 min</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="colonne-droite">
+            <a href="nouvelle_tache.html" class="btn-action">Nouvelle Tâche</a>
+            <p class="texte-gris">Prêt à passer à l'action ? Ajoute un nouvel objectif en renseignant simplement son niveau et sa durée estimée.</p>
+            
+            <div id="saisie-mobile" class="bloc-saisie">
+                <a href="#" class="btn-fermer-saisie">✕ Fermer</a>
+                <input type="text" id="tache" placeholder="Nom de la tâche">
+                <select id="niveau">
+                    <option value="facile">Facile</option>
+                    <option value="moyen">Moyen</option>
+                    <option value="difficile">Difficile</option>
+                </select>
+                <input type="number" id="duree" placeholder="Durée (minutes)">
+            </div>
+
+            <a href="#saisie-mobile" class="btn-rond-plus">+</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; DI 2025-27, Tous droits réservés</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
