@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <div class="logo-box">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" width="44" height="44">
@@ -72,12 +71,11 @@
             </div>
         </section>
 
-        <section class="colonne-droite">
+        <section class="colonne-droite" id="zone-ajout">
             <a href="nouvelle_tache.html" class="btn-action">Nouvelle Tâche</a>
             <p class="texte-gris">Prêt à passer à l'action ? Ajoute un nouvel objectif en renseignant simplement son niveau et sa durée estimée.</p>
             
-            <div id="saisie-mobile" class="bloc-saisie">
-                <a href="#" class="btn-fermer-saisie">✕ Fermer</a>
+            <div class="formulaire-inputs">
                 <input type="text" id="tache" placeholder="Nom de la tâche">
                 <select id="niveau">
                     <option value="facile">Facile</option>
@@ -87,14 +85,16 @@
                 <input type="number" id="duree" placeholder="Durée (minutes)">
             </div>
 
-            <a href="#saisie-mobile" class="btn-rond-plus">+</a>
+            <a href="#zone-ajout" class="btn-rond-plus">+</a>
         </section>
     </main>
 
     <footer>
         <p>&copy; DI 2025-27, Tous droits réservés</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
